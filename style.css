@@ -90,7 +90,7 @@ body {
     font-family: 'Courier New', monospace;
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    background: #1a1a1a;
+    background: #000000;
     padding: 1rem;
     border-radius: 0;
     border: 2px solid #00ff00;
@@ -115,7 +115,7 @@ body {
 /* About Section */
 .about-section {
     padding: 80px 20px;
-    background: #1a1a1a;
+    background: #000000;
 }
 
 .about-section h2 {
@@ -135,7 +135,7 @@ body {
 /* Accomplishments Section */
 .accomplishments-section {
     padding: 80px 20px;
-    background: #0a0a0a;
+    background: #000000;
 }
 
 .accomplishments-section h2 {
@@ -152,7 +152,7 @@ body {
 }
 
 .accomplishment-card {
-    background: #1a1a1a;
+    background: #000000;
     padding: 2rem;
     border-radius: 0;
     box-shadow: none;
@@ -205,7 +205,7 @@ body {
 /* What We Do Section */
 .what-we-do-section {
     padding: 80px 20px;
-    background: #1a1a1a;
+    background: #000000;
 }
 
 .what-we-do-section h2 {
@@ -222,7 +222,7 @@ body {
 }
 
 .activity-card {
-    background: #0a0a0a;
+    background: #000000;
     padding: 2rem;
     border-radius: 0;
     border: 2px solid #00ff00;
@@ -253,7 +253,7 @@ body {
 /* Why Join Section */
 .why-join-section {
     padding: 80px 20px;
-    background: #0a0a0a;
+    background: #000000;
 }
 
 .why-join-section h2 {
@@ -273,7 +273,7 @@ body {
     font-size: 1.2rem;
     padding: 1rem;
     margin-bottom: 1rem;
-    background: #1a1a1a;
+    background: #000000;
     border-radius: 0;
     box-shadow: none;
     border: 2px solid #00ff00;
@@ -302,7 +302,7 @@ body {
 /* Events Section */
 .events-section {
     padding: 80px 20px;
-    background: #1a1a1a;
+    background: #000000;
 }
 
 .events-section h2 {
@@ -328,7 +328,7 @@ body {
 }
 
 .event-card {
-    background: #0a0a0a;
+    background: #000000;
     padding: 2rem;
     border-radius: 0;
     box-shadow: none;
@@ -384,7 +384,7 @@ body {
 /* Members Section */
 .members-section {
     padding: 80px 20px;
-    background: #0a0a0a;
+    background: #000000;
 }
 
 .members-section h2 {
@@ -401,7 +401,7 @@ body {
 }
 
 .member-card {
-    background: #1a1a1a;
+    background: #000000;
     padding: 2rem;
     border-radius: 0;
     box-shadow: none;
@@ -440,7 +440,7 @@ body {
 /* Values Section */
 .values-section {
     padding: 80px 20px;
-    background: #1a1a1a;
+    background: #000000;
     text-align: center;
 }
 

@@ -39,15 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Navbar background change on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%)';
-    } else {
-        navbar.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-    }
-});
 
 // Add active state to navigation links
 window.addEventListener('scroll', () => {
@@ -74,7 +65,4 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Console message for fun
-console.log('%cCSHS Website', 'color: #667eea; font-size: 24px; font-weight: bold;');
-console.log('%cprint("Hello World!")', 'color: #764ba2; font-size: 16px; font-family: monospace;');
 console.log('Welcome to the BASIS Phoenix Computer Science Honor Society website!');
