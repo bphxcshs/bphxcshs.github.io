@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
+    background-color: #ffffff;
 }
 
 .container {
@@ -20,14 +21,15 @@ body {
 
 /* Navigation */
 .navbar {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #000000;
     color: white;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    border-bottom: 3px solid #00ff00;
 }
 
 .navbar .container {
@@ -61,8 +63,8 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: #000000;
+    color: #00ff00;
     padding: 150px 20px 100px;
     text-align: center;
     min-height: 100vh;
@@ -88,9 +90,10 @@ body {
     font-family: 'Courier New', monospace;
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: #1a1a1a;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 0;
+    border: 2px solid #00ff00;
     animation: fadeInUp 1s ease-out 0.3s both;
 }
 
@@ -98,13 +101,14 @@ body {
     font-size: 1.1rem;
     font-style: italic;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    color: #ffffff;
     animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 .hero-description {
     font-size: 1.2rem;
     line-height: 1.8;
+    color: #ffffff;
     animation: fadeInUp 1s ease-out 0.7s both;
 }
 
@@ -117,7 +121,7 @@ body {
 .about-section h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #667eea;
+    color: #00ff00;
     text-align: center;
 }
 
@@ -130,13 +134,13 @@ body {
 /* Accomplishments Section */
 .accomplishments-section {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: #f5f5f5;
 }
 
 .accomplishments-section h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #667eea;
+    color: #00ff00;
     text-align: center;
 }
 
@@ -149,26 +153,28 @@ body {
 .accomplishment-card {
     background: white;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 0;
+    box-shadow: none;
+    border: 2px solid #00ff00;
+    transition: transform 0.3s, border-color 0.3s;
 }
 
 .accomplishment-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-color: #000000;
+    background: #00ff00;
 }
 
 .accomplishment-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #764ba2;
+    color: #000000;
 }
 
 /* Mission Section */
 .mission-section {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #000000;
     color: white;
     text-align: center;
 }
@@ -176,6 +182,7 @@ body {
 .mission-section h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    color: #00ff00;
 }
 
 .mission-section p {
@@ -194,7 +201,7 @@ body {
 .what-we-do-section h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #667eea;
+    color: #00ff00;
     text-align: center;
 }
 
@@ -205,33 +212,35 @@ body {
 }
 
 .activity-card {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: #f5f5f5;
     padding: 2rem;
-    border-radius: 15px;
+    border-radius: 0;
+    border: 2px solid #000000;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background 0.3s;
 }
 
 .activity-card:hover {
     transform: scale(1.05);
+    background: #00ff00;
 }
 
 .activity-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #764ba2;
+    color: #000000;
 }
 
 /* Why Join Section */
 .why-join-section {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: #f5f5f5;
 }
 
 .why-join-section h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #667eea;
+    color: #00ff00;
     text-align: center;
 }
 
@@ -246,8 +255,9 @@ body {
     padding: 1rem;
     margin-bottom: 1rem;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    box-shadow: none;
+    border: 2px solid #000000;
     padding-left: 3rem;
     position: relative;
 }
@@ -256,7 +266,7 @@ body {
     content: "✓";
     position: absolute;
     left: 1rem;
-    color: #667eea;
+    color: #00ff00;
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -265,7 +275,7 @@ body {
     font-size: 1.3rem;
     text-align: center;
     font-weight: 500;
-    color: #764ba2;
+    color: #000000;
     margin-top: 2rem;
 }
 
@@ -278,7 +288,7 @@ body {
 .events-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #667eea;
+    color: #00ff00;
     text-align: center;
 }
 
@@ -298,22 +308,23 @@ body {
 }
 
 .event-card {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: #f5f5f5;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    box-shadow: none;
+    border: 2px solid #000000;
 }
 
 .event-card h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #764ba2;
+    color: #000000;
 }
 
 .event-link {
     display: inline-block;
     margin-top: 1rem;
-    color: #667eea;
+    color: #00ff00;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -321,14 +332,15 @@ body {
 }
 
 .event-link:hover {
-    color: #764ba2;
+    color: #000000;
 }
 
 .quote {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: #000000;
+    color: #00ff00;
     padding: 3rem;
-    border-radius: 15px;
+    border-radius: 0;
+    border: 3px solid #00ff00;
     text-align: center;
     margin-top: 3rem;
 }
@@ -342,18 +354,19 @@ body {
 .quote cite {
     font-size: 1.2rem;
     font-style: normal;
+    color: white;
 }
 
 /* Members Section */
 .members-section {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: #f5f5f5;
 }
 
 .members-section h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #667eea;
+    color: #00ff00;
     text-align: center;
 }
 
@@ -366,25 +379,26 @@ body {
 .member-card {
     background: white;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 0;
+    box-shadow: none;
+    border: 2px solid #000000;
+    transition: transform 0.3s, background 0.3s;
 }
 
 .member-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background: #00ff00;
 }
 
 .member-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #764ba2;
+    color: #000000;
 }
 
 .member-role {
     font-weight: bold;
-    color: #667eea;
+    color: #00ff00;
     margin-bottom: 1rem;
     font-size: 1.1rem;
 }
@@ -399,7 +413,7 @@ body {
 .values-section h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #667eea;
+    color: #00ff00;
 }
 
 .values-section p {
@@ -412,7 +426,7 @@ body {
 /* Requirements Section */
 .requirements-section {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #000000;
     color: white;
 }
 
@@ -420,6 +434,7 @@ body {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-align: center;
+    color: #00ff00;
 }
 
 .requirements-content {
@@ -440,8 +455,9 @@ body {
     font-size: 1.1rem;
     padding: 1rem;
     margin-bottom: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    background: transparent;
+    border-radius: 0;
+    border: 2px solid #00ff00;
     padding-left: 3rem;
     position: relative;
 }
@@ -451,14 +467,16 @@ body {
     position: absolute;
     left: 1rem;
     font-size: 1.5rem;
+    color: #00ff00;
 }
 
 /* Footer */
 .footer {
-    background: #2c3e50;
+    background: #000000;
     color: white;
     padding: 2rem 0;
     text-align: center;
+    border-top: 3px solid #00ff00;
 }
 
 .footer p {
