@@ -156,13 +156,18 @@ body {
     border-radius: 0;
     box-shadow: none;
     border: 2px solid #00ff00;
-    transition: transform 0.3s, border-color 0.3s;
+    transition: transform 0.3s, border-color 0.3s, background 0.3s;
 }
 
 .accomplishment-card:hover {
     transform: translateY(-5px);
     border-color: #000000;
     background: #00ff00;
+}
+
+.accomplishment-card:hover h3,
+.accomplishment-card:hover p {
+    color: #000000;
 }
 
 .accomplishment-card h3 {
@@ -217,12 +222,17 @@ body {
     border-radius: 0;
     border: 2px solid #000000;
     text-align: center;
-    transition: transform 0.3s, background 0.3s;
+    transition: transform 0.3s, background 0.3s, border-color 0.3s;
 }
 
 .activity-card:hover {
     transform: scale(1.05);
     background: #00ff00;
+}
+
+.activity-card:hover h3,
+.activity-card:hover p {
+    color: #000000;
 }
 
 .activity-card h3 {
@@ -340,7 +350,7 @@ body {
     color: #00ff00;
     padding: 3rem;
     border-radius: 0;
-    border: 3px solid #00ff00;
+    border: 2px solid #00ff00;
     text-align: center;
     margin-top: 3rem;
 }
@@ -382,12 +392,18 @@ body {
     border-radius: 0;
     box-shadow: none;
     border: 2px solid #000000;
-    transition: transform 0.3s, background 0.3s;
+    transition: transform 0.3s, background 0.3s, border-color 0.3s;
 }
 
 .member-card:hover {
     transform: translateY(-5px);
     background: #00ff00;
+}
+
+.member-card:hover h3,
+.member-card:hover p,
+.member-card:hover .member-role {
+    color: #000000;
 }
 
 .member-card h3 {
