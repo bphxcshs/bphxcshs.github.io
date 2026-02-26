@@ -48,6 +48,19 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
+function getMemberYearFromGraduation(gradYear) {
+  const now = new Date();
+  const academicYearStart = now.getMonth() >= 7 ? now.getFullYear() : now.getFullYear() - 1;
+  const yearsUntilGraduation = gradYear - academicYearStart;
+
+  if (yearsUntilGraduation === 4) return "Freshman";
+  if (yearsUntilGraduation === 3) return "Sophomore";
+  if (yearsUntilGraduation === 2) return "Junior";
+  if (yearsUntilGraduation === 1) return "Senior";
+  if (yearsUntilGraduation <= 0) return "Alumni";
+  return "Member";
+}
+
 // Initialize TUI effects
 document.addEventListener("DOMContentLoaded", () => {
   // Remove loading class (enabling scroll)
@@ -80,6 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach((link, i) => {
     link.setAttribute("data-key", `F${i + 1}`);
     link.title = `Press F${i + 1}`;
+  });
+
+  const memberYears = document.querySelectorAll(".member-year[data-grad-year]");
+  memberYears.forEach((memberYear) => {
+    const gradYear = Number(memberYear.dataset.gradYear);
+    if (!Number.isNaN(gradYear)) {
+      memberYear.textContent = getMemberYearFromGraduation(gradYear);
+    }
   });
 });
 
