@@ -61,6 +61,40 @@ function getMemberYearFromGraduation(gradYear) {
   return "Member";
 }
 
+function getInitials(name) {
+  if (!name) return "CS";
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+  return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
+}
+
+function tryMemberImageSources(imageElement, imageSlug, onLoaded, onFailed) {
+  const extensions = ["png", "jpg", "jpeg", "webp"];
+  let extensionIndex = 0;
+
+  const tryNextSource = () => {
+    if (!imageSlug || extensionIndex >= extensions.length) {
+      onFailed();
+      return;
+    }
+
+    const source = `images/members/${imageSlug}.${extensions[extensionIndex]}`;
+    extensionIndex += 1;
+
+    imageElement.onload = () => {
+      onLoaded();
+    };
+
+    imageElement.onerror = () => {
+      tryNextSource();
+    };
+
+    imageElement.src = source;
+  };
+
+  tryNextSource();
+}
+
 // Initialize TUI effects
 document.addEventListener("DOMContentLoaded", () => {
   // Remove loading class (enabling scroll)
@@ -101,6 +135,51 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!Number.isNaN(gradYear)) {
       memberYear.textContent = getMemberYearFromGraduation(gradYear);
     }
+  });
+
+  const memberCards = document.querySelectorAll(".member-card");
+  memberCards.forEach((memberCard) => {
+    const memberName = memberCard.dataset.memberName || "CSHS Member";
+    const imageSlug = memberCard.dataset.memberImage || "";
+    const imagePosition = memberCard.dataset.memberPosition || "center";
+
+    const avatar = memberCard.querySelector(".member-avatar");
+    const image = memberCard.querySelector(".member-avatar img");
+    const initials = memberCard.querySelector(".avatar-initials");
+    const role = memberCard.querySelector(".member-role");
+    const memberYear = memberCard.querySelector(".member-year[data-grad-year]");
+
+    if (!avatar || !image || !initials) {
+      return;
+    }
+
+    const roleText = role ? role.textContent.trim() : "Member";
+    image.alt = `Portrait of ${memberName}, ${roleText}`;
+    image.style.objectPosition = imagePosition;
+
+    initials.textContent = getInitials(memberName);
+
+    if (memberYear && !memberCard.querySelector(".member-badge")) {
+      const graduationYear = memberYear.dataset.gradYear;
+      if (graduationYear) {
+        const badge = document.createElement("span");
+        badge.className = "member-badge";
+        badge.textContent = `Class of ${graduationYear}`;
+        role.insertAdjacentElement("afterend", badge);
+      }
+    }
+
+    tryMemberImageSources(
+      image,
+      imageSlug,
+      () => {
+        avatar.classList.add("has-image");
+      },
+      () => {
+        image.removeAttribute("src");
+        avatar.classList.remove("has-image");
+      },
+    );
   });
 });
 
