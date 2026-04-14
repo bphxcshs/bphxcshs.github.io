@@ -1025,7 +1025,8 @@ body::after {
 .footer {
   background: #0a0a0a;
   color: #888;
-  padding: 16px;
+  margin-top: 36px;
+  padding: 24px 16px 16px;
   text-align: left;
   border-top: 1px solid #33ff33;
 }
